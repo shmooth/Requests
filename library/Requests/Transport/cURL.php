@@ -7,6 +7,7 @@
  */
 
 use Requests\Requests;
+use Requests\Transport;
 
 /**
  * cURL HTTP transport
@@ -14,7 +15,7 @@ use Requests\Requests;
  * @package Requests
  * @subpackage Transport
  */
-class Requests_Transport_cURL implements Requests_Transport {
+class Requests_Transport_cURL implements Transport {
 	const CURL_7_10_5 = 0x070A05;
 	const CURL_7_16_2 = 0x071002;
 
