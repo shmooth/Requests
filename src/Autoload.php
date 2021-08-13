@@ -44,6 +44,7 @@ if (class_exists('Requests\Autoload') === false) {
 			'requests_exception'   => '\Requests\Exception',
 			'requests_hooks'       => '\Requests\Hooks',
 			'requests_idnaencoder' => '\Requests\IdnaEncoder',
+			'requests_ipv6'        => '\Requests\Ipv6',
 		);
 
 		/**
