@@ -6,13 +6,15 @@
  * @subpackage Utilities
  */
 
+use Requests\Hooker;
+
 /**
  * Handles adding and dispatching events
  *
  * @package Requests
  * @subpackage Utilities
  */
-class Requests_Hooks implements Requests_Hooker {
+class Requests_Hooks implements Hooker {
 	/**
 	 * Registered callbacks for each hook
 	 *

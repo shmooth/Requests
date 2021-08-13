@@ -34,7 +34,8 @@ if (class_exists('Requests\Autoload') === false) {
 		 */
 		private static $deprecated_classes = array(
 			// Interfaces.
-			'requests_auth' => 'Requests\Auth',
+			'requests_auth'   => '\Requests\Auth',
+			'requests_hooker' => '\Requests\Hooker',
 		);
 
 		/**
