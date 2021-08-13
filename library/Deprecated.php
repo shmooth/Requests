@@ -29,3 +29,4 @@ if (!defined('REQUESTS_SILENCE_PSR0_DEPRECATIONS') || REQUESTS_SILENCE_PSR0_DEPR
 
 interface Requests_Auth extends Requests\Auth {}
 interface Requests_Hooker extends Requests\Hooker {}
+interface Requests_Proxy extends Requests\Proxy {}

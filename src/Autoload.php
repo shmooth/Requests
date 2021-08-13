@@ -36,6 +36,7 @@ if (class_exists('Requests\Autoload') === false) {
 			// Interfaces.
 			'requests_auth'   => '\Requests\Auth',
 			'requests_hooker' => '\Requests\Hooker',
+			'requests_proxy'  => '\Requests\Proxy',
 		);
 
 		/**
