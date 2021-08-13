@@ -13,9 +13,9 @@ namespace Requests;
 
 use Requests\Exception;
 use Requests\Hooks;
+use Requests\IdnaEncoder;
 use Requests_Auth_Basic;
 use Requests_Cookie_Jar;
-use Requests_IDNAEncoder;
 use Requests_IRI;
 use Requests_Proxy_HTTP;
 use Requests_Response;
@@ -576,7 +576,7 @@ class Requests {
 
 		if ($options['idn'] !== false) {
 			$iri       = new Requests_IRI($url);
-			$iri->host = Requests_IDNAEncoder::encode($iri->ihost);
+			$iri->host = IdnaEncoder::encode($iri->ihost);
 			$url       = $iri->uri;
 		}
 
