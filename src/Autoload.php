@@ -38,6 +38,9 @@ if (class_exists('Requests\Autoload') === false) {
 			'requests_hooker'    => '\Requests\Hooker',
 			'requests_proxy'     => '\Requests\Proxy',
 			'requests_transport' => '\Requests\Transport',
+
+			// Classes.
+			'requests_cookie'    => '\Requests\Cookie',
 		);
 
 		/**
