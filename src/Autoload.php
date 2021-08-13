@@ -42,6 +42,7 @@ if (class_exists('Requests\Autoload') === false) {
 			// Classes.
 			'requests_cookie'    => '\Requests\Cookie',
 			'requests_exception' => '\Requests\Exception',
+			'requests_hooks'     => '\Requests\Hooks',
 		);
 
 		/**

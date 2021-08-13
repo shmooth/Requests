@@ -8,6 +8,7 @@
 
 use Requests\Auth;
 use Requests\Exception;
+use Requests\Hooks;
 
 /**
  * Basic Authentication provider
@@ -54,9 +55,9 @@ class Requests_Auth_Basic implements Auth {
 	 *
 	 * @see curl_before_send
 	 * @see fsockopen_header
-	 * @param Requests_Hooks $hooks Hook system
+	 * @param \Requests\Hooks $hooks Hook system
 	 */
-	public function register(Requests_Hooks $hooks) {
+	public function register(Hooks $hooks) {
 		$hooks->register('curl.before_send', array($this, 'curl_before_send'));
 		$hooks->register('fsockopen.after_headers', array($this, 'fsockopen_header'));
 	}

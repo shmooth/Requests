@@ -34,3 +34,4 @@ interface Requests_Transport extends Requests\Transport {}
 
 class Requests_Cookie extends Requests\Cookie {}
 class Requests_Exception extends Requests\Exception {}
+class Requests_Hooks extends Requests\Hooks {}

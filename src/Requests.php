@@ -12,9 +12,9 @@
 namespace Requests;
 
 use Requests\Exception;
+use Requests\Hooks;
 use Requests_Auth_Basic;
 use Requests_Cookie_Jar;
-use Requests_Hooks;
 use Requests_IDNAEncoder;
 use Requests_IRI;
 use Requests_Proxy_HTTP;
@@ -315,7 +315,7 @@ class Requests {
 	 *    {@see getTransport()}
 	 *    (string|\Requests\Transport, default: {@see getTransport()})
 	 * - `hooks`: Hooks handler.
-	 *    (\Requests\Hooker, default: new Requests_Hooks())
+	 *    (\Requests\Hooker, default: new Requests\Hooks())
 	 * - `verify`: Should we verify SSL certificates? Allows passing in a custom
 	 *    certificate file as a string. (Using true uses the system-wide root
 	 *    certificate store instead, but this may have different behaviour
@@ -547,7 +547,7 @@ class Requests {
 		}
 
 		if (empty($options['hooks'])) {
-			$options['hooks'] = new Requests_Hooks();
+			$options['hooks'] = new Hooks();
 		}
 
 		if (is_array($options['auth'])) {
