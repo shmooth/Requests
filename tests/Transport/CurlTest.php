@@ -5,10 +5,10 @@ namespace Requests\Tests\Transport;
 use Requests\Exception;
 use Requests\Requests;
 use Requests\Tests\Transport\BaseTestCase;
-use Requests_Transport_cURL;
+use Requests\Transport\Curl;
 
 class CurlTest extends BaseTestCase {
-	protected $transport = Requests_Transport_cURL::class;
+	protected $transport = Curl::class;
 
 	public function testBadIP() {
 		$this->expectException(Exception::class);

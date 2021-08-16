@@ -6,14 +6,14 @@ use Requests\Auth\Basic;
 use Requests\Exception;
 use Requests\Requests;
 use Requests\Tests\TestCase;
-use Requests_Transport_cURL;
+use Requests\Transport\Curl;
 use Requests_Transport_fsockopen;
 
 class BasicTest extends TestCase {
 	public static function transportProvider() {
 		return array(
 			array(Requests_Transport_fsockopen::class),
-			array(Requests_Transport_cURL::class),
+			array(Curl::class),
 		);
 	}
 

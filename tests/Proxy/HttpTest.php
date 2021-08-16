@@ -6,7 +6,7 @@ use Requests\Exception;
 use Requests\Proxy\Http;
 use Requests\Requests;
 use Requests\Tests\TestCase;
-use Requests_Transport_cURL;
+use Requests\Transport\Curl;
 use Requests_Transport_fsockopen;
 
 class HttpTest extends TestCase {
@@ -28,7 +28,7 @@ class HttpTest extends TestCase {
 
 	public function transportProvider() {
 		return array(
-			array(Requests_Transport_cURL::class),
+			array(Curl::class),
 			array(Requests_Transport_fsockopen::class),
 		);
 	}

@@ -19,7 +19,7 @@ use Requests\IdnaEncoder;
 use Requests\Iri;
 use Requests\Proxy\Http;
 use Requests\Response;
-use Requests_Transport_cURL;
+use Requests\Transport\Curl;
 use Requests_Transport_fsockopen;
 
 /**
@@ -144,7 +144,7 @@ class Requests {
 	public static function add_transport($transport) {
 		if (empty(self::$transports)) {
 			self::$transports = array(
-				Requests_Transport_cURL::class,
+				Curl::class,
 				Requests_Transport_fsockopen::class,
 			);
 		}
@@ -174,7 +174,7 @@ class Requests {
 
 		if (empty(self::$transports)) {
 			self::$transports = array(
-				Requests_Transport_cURL::class,
+				Curl::class,
 				Requests_Transport_fsockopen::class,
 			);
 		}

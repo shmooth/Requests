@@ -6,9 +6,15 @@
  * @subpackage Transport
  */
 
+namespace Requests\Transport;
+
+use RecursiveArrayIterator;
+use RecursiveIteratorIterator;
 use Requests\Exception;
 use Requests\Requests;
 use Requests\Transport;
+use Requests_Exception_InvalidArgument;
+use Requests_Exception_Transport_cURL;
 
 /**
  * cURL HTTP transport
@@ -16,7 +22,7 @@ use Requests\Transport;
  * @package Requests
  * @subpackage Transport
  */
-class Requests_Transport_cURL implements Transport {
+class Curl implements Transport {
 	const CURL_7_10_5 = 0x070A05;
 	const CURL_7_16_2 = 0x071002;
 
@@ -207,7 +213,7 @@ class Requests_Transport_cURL implements Transport {
 		$this->process_response($response, $options);
 
 		// Need to remove the $this reference from the curl handle.
-		// Otherwise Requests_Transport_cURL wont be garbage collected and the curl_close() will never be called.
+		// Otherwise \Requests\Transport\Curl wont be garbage collected and the curl_close() will never be called.
 		curl_setopt($this->handle, CURLOPT_HEADERFUNCTION, null);
 		curl_setopt($this->handle, CURLOPT_WRITEFUNCTION, null);
 

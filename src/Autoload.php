@@ -53,6 +53,7 @@ if (class_exists('Requests\Autoload') === false) {
 			'requests_cookie_jar'       => '\Requests\Cookie\Jar',
 			'requests_proxy_http'       => '\Requests\Proxy\Http',
 			'requests_response_headers' => '\Requests\Response\Headers',
+			'requests_transport_curl'   => '\Requests\Transport\Curl',
 		);
 
 		/**
