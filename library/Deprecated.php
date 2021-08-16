@@ -37,3 +37,4 @@ class Requests_Exception extends Requests\Exception {}
 class Requests_Hooks extends Requests\Hooks {}
 class Requests_IDNAEncoder extends Requests\IdnaEncoder {}
 class Requests_IPv6 extends Requests\Ipv6 {}
+class Requests_IRI extends Requests\Iri {}

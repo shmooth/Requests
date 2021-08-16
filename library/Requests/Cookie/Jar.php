@@ -9,6 +9,7 @@
 use Requests\Cookie;
 use Requests\Exception;
 use Requests\Hooker;
+use Requests\Iri;
 
 /**
  * Cookie holder object
@@ -132,8 +133,8 @@ class Requests_Cookie_Jar implements ArrayAccess, IteratorAggregate {
 	 * @param array $options
 	 */
 	public function before_request($url, &$headers, &$data, &$type, &$options) {
-		if (!$url instanceof Requests_IRI) {
-			$url = new Requests_IRI($url);
+		if (!$url instanceof Iri) {
+			$url = new Iri($url);
 		}
 
 		if (!empty($this->cookies)) {
@@ -162,8 +163,8 @@ class Requests_Cookie_Jar implements ArrayAccess, IteratorAggregate {
 	 */
 	public function before_redirect_check(Requests_Response $return) {
 		$url = $return->url;
-		if (!$url instanceof Requests_IRI) {
-			$url = new Requests_IRI($url);
+		if (!$url instanceof Iri) {
+			$url = new Iri($url);
 		}
 
 		$cookies         = Cookie::parse_from_headers($return->headers, $url);
