@@ -48,3 +48,4 @@ class Requests_Proxy_HTTP extends Requests\Proxy\Http {}
 class Requests_Response_Headers extends Requests\Response\Headers {}
 class Requests_Transport_cURL extends Requests\Transport\Curl {}
 class Requests_Transport_fsockopen extends Requests\Transport\Fsockopen {}
+class Requests_Utility_CaseInsensitiveDictionary extends Requests\Utility\CaseInsensitiveDictionary {}

@@ -12,8 +12,8 @@ use Requests\Exception;
 use Requests\Requests;
 use Requests\Ssl;
 use Requests\Transport;
+use Requests\Utility\CaseInsensitiveDictionary;
 use Requests_Exception_InvalidArgument;
-use Requests_Utility_CaseInsensitiveDictionary;
 
 /**
  * fsockopen HTTP transport
@@ -93,7 +93,7 @@ class Fsockopen implements Transport {
 		$host                     = $url_parts['host'];
 		$context                  = stream_context_create();
 		$verifyname               = false;
-		$case_insensitive_headers = new Requests_Utility_CaseInsensitiveDictionary($headers);
+		$case_insensitive_headers = new CaseInsensitiveDictionary($headers);
 
 		// HTTPS support
 		if (isset($url_parts['scheme']) && strtolower($url_parts['scheme']) === 'https') {

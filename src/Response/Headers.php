@@ -8,7 +8,7 @@
 namespace Requests\Response;
 
 use Requests\Exception;
-use Requests_Utility_CaseInsensitiveDictionary;
+use Requests\Utility\CaseInsensitiveDictionary;
 use Requests_Utility_FilteredIterator;
 
 /**
@@ -16,7 +16,7 @@ use Requests_Utility_FilteredIterator;
  *
  * @package Requests
  */
-class Headers extends Requests_Utility_CaseInsensitiveDictionary {
+class Headers extends CaseInsensitiveDictionary {
 	/**
 	 * Get the given header
 	 *

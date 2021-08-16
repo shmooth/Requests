@@ -6,7 +6,13 @@
  * @subpackage Utilities
  */
 
+namespace Requests\Utility;
+
+use ArrayAccess;
+use ArrayIterator;
+use IteratorAggregate;
 use Requests\Exception;
+use ReturnTypeWillChange;
 
 /**
  * Case-insensitive dictionary, suitable for HTTP headers
@@ -14,7 +20,7 @@ use Requests\Exception;
  * @package Requests
  * @subpackage Utilities
  */
-class Requests_Utility_CaseInsensitiveDictionary implements ArrayAccess, IteratorAggregate {
+class CaseInsensitiveDictionary implements ArrayAccess, IteratorAggregate {
 	/**
 	 * Actual item data
 	 *
@@ -92,7 +98,7 @@ class Requests_Utility_CaseInsensitiveDictionary implements ArrayAccess, Iterato
 	/**
 	 * Get an iterator for the data
 	 *
-	 * @return ArrayIterator
+	 * @return \ArrayIterator
 	 */
 	#[ReturnTypeWillChange]
 	public function getIterator() {

@@ -10,7 +10,7 @@ namespace Requests;
 
 use Requests\Iri;
 use Requests\Response\Headers;
-use Requests_Utility_CaseInsensitiveDictionary;
+use Requests\Utility\CaseInsensitiveDictionary;
 
 /**
  * Cookie storage object
@@ -39,7 +39,7 @@ class Cookie {
 	 * Valid keys are (currently) path, domain, expires, max-age, secure and
 	 * httponly.
 	 *
-	 * @var Requests_Utility_CaseInsensitiveDictionary|array Array-like object
+	 * @var \Requests\Utility\CaseInsensitiveDictionary|array Array-like object
 	 */
 	public $attributes = array();
 
@@ -68,7 +68,7 @@ class Cookie {
 	 *
 	 * @param string $name
 	 * @param string $value
-	 * @param array|Requests_Utility_CaseInsensitiveDictionary $attributes Associative array of attribute data
+	 * @param array|\Requests\Utility\CaseInsensitiveDictionary $attributes Associative array of attribute data
 	 */
 	public function __construct($name, $value, $attributes = array(), $flags = array(), $reference_time = null) {
 		$this->name       = $name;
@@ -391,7 +391,7 @@ class Cookie {
 		$value = trim($value);
 
 		// Attribute key are handled case-insensitively
-		$attributes = new Requests_Utility_CaseInsensitiveDictionary();
+		$attributes = new CaseInsensitiveDictionary();
 
 		if (!empty($parts)) {
 			foreach ($parts as $part) {
