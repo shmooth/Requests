@@ -6,7 +6,12 @@
  * @package Requests
  */
 
+namespace Requests;
+
 use Requests\Exception;
+use Requests_Cookie_Jar;
+use Requests_Exception_HTTP;
+use Requests_Response_Headers;
 
 /**
  * HTTP response class
@@ -14,7 +19,7 @@ use Requests\Exception;
  * Contains a response from \Requests\Requests::request()
  * @package Requests
  */
-class Requests_Response {
+class Response {
 	/**
 	 * Constructor
 	 */
@@ -82,7 +87,7 @@ class Requests_Response {
 	/**
 	 * Previous requests (from redirects)
 	 *
-	 * @var array Array of Requests_Response objects
+	 * @var array Array of \Requests\Response objects
 	 */
 	public $history = array();
 

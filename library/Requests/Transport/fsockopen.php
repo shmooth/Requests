@@ -331,7 +331,7 @@ class Requests_Transport_fsockopen implements Transport {
 	 *
 	 * @param array $requests Request data (array of 'url', 'headers', 'data', 'options') as per {@see \Requests\Transport::request}
 	 * @param array $options Global options, see {@see \Requests\Requests::response()} for documentation
-	 * @return array Array of Requests_Response objects (may contain \Requests\Exception or string responses as well)
+	 * @return array Array of \Requests\Response objects (may contain \Requests\Exception or string responses as well)
 	 */
 	public function request_multiple($requests, $options) {
 		$responses = array();

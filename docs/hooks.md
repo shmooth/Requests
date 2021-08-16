@@ -28,7 +28,7 @@ Available Hooks
 
     Alter the response object before it is returned to the user.
 
-    Parameters: `Requests_Response &$return`
+    Parameters: `Requests\Response &$return`
 
 * **`curl.before_request`**
 

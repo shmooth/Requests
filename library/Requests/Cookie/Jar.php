@@ -10,6 +10,7 @@ use Requests\Cookie;
 use Requests\Exception;
 use Requests\Hooker;
 use Requests\Iri;
+use Requests\Response;
 
 /**
  * Cookie holder object
@@ -159,9 +160,9 @@ class Requests_Cookie_Jar implements ArrayAccess, IteratorAggregate {
 	/**
 	 * Parse all cookies from a response and attach them to the response
 	 *
-	 * @var Requests_Response $response
+	 * @var \Requests\Response $response
 	 */
-	public function before_redirect_check(Requests_Response $return) {
+	public function before_redirect_check(Response $return) {
 		$url = $return->url;
 		if (!$url instanceof Iri) {
 			$url = new Iri($url);
