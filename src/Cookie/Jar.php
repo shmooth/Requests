@@ -6,11 +6,17 @@
  * @subpackage Cookies
  */
 
+namespace Requests\Cookie;
+
+use ArrayAccess;
+use ArrayIterator;
+use IteratorAggregate;
 use Requests\Cookie;
 use Requests\Exception;
 use Requests\Hooker;
 use Requests\Iri;
 use Requests\Response;
+use ReturnTypeWillChange;
 
 /**
  * Cookie holder object
@@ -18,7 +24,7 @@ use Requests\Response;
  * @package Requests
  * @subpackage Cookies
  */
-class Requests_Cookie_Jar implements ArrayAccess, IteratorAggregate {
+class Jar implements ArrayAccess, IteratorAggregate {
 	/**
 	 * Actual item data
 	 *
@@ -105,7 +111,7 @@ class Requests_Cookie_Jar implements ArrayAccess, IteratorAggregate {
 	/**
 	 * Get an iterator for the data
 	 *
-	 * @return ArrayIterator
+	 * @return \ArrayIterator
 	 */
 	#[ReturnTypeWillChange]
 	public function getIterator() {

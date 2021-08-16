@@ -8,9 +8,9 @@
 
 namespace Requests;
 
+use Requests\Cookie\Jar;
 use Requests\Iri;
 use Requests\Requests;
-use Requests_Cookie_Jar;
 
 /**
  * Session handler for persistent requests and default parameters
@@ -78,7 +78,7 @@ class Session {
 		$this->options = $options;
 
 		if (empty($this->options['cookies'])) {
-			$this->options['cookies'] = new Requests_Cookie_Jar();
+			$this->options['cookies'] = new Jar();
 		}
 	}
 

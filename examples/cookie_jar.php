@@ -7,7 +7,7 @@ require_once dirname(__DIR__) . '/src/Autoload.php';
 Requests\Autoload::register();
 
 // Say you need to fake a login cookie
-$c = new Requests_Cookie_Jar(['login_uid' => 'something']);
+$c = new Requests\Cookie\Jar(['login_uid' => 'something']);
 
 // Now let's make a request!
 $request = Requests\Requests::get(

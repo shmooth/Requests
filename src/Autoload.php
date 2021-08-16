@@ -50,6 +50,7 @@ if (class_exists('Requests\Autoload') === false) {
 			'requests_session'     => '\Requests\Session',
 			'requests_ssl'         => '\Requests\Ssl',
 			'requests_auth_basic'  => '\Requests\Auth\Basic',
+			'requests_cookie_jar'  => '\Requests\Cookie\Jar',
 		);
 
 		/**

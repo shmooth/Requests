@@ -3,11 +3,11 @@
 namespace Requests\Tests;
 
 use Requests\Cookie;
+use Requests\Cookie\Jar;
 use Requests\Exception;
 use Requests\Iri;
 use Requests\Requests;
 use Requests\Tests\TestCase;
-use Requests_Cookie_Jar;
 use Requests_Response_Headers;
 use Requests_Utility_CaseInsensitiveDictionary;
 
@@ -46,10 +46,10 @@ class CookiesTest extends TestCase {
 	}
 
 	public function testCookieJarSetter() {
-		$jar1                        = new Requests_Cookie_Jar();
+		$jar1                        = new Jar();
 		$jar1['requests-testcookie'] = 'testvalue';
 
-		$jar2 = new Requests_Cookie_Jar(
+		$jar2 = new Jar(
 			array(
 				'requests-testcookie' => 'testvalue',
 			)
@@ -58,7 +58,7 @@ class CookiesTest extends TestCase {
 	}
 
 	public function testCookieJarUnsetter() {
-		$jar                        = new Requests_Cookie_Jar();
+		$jar                        = new Jar();
 		$jar['requests-testcookie'] = 'testvalue';
 
 		$this->assertSame('testvalue', $jar['requests-testcookie']);
@@ -71,7 +71,7 @@ class CookiesTest extends TestCase {
 	public function testCookieJarAsList() {
 		$this->expectException(Exception::class);
 		$this->expectExceptionMessage('Object is a dictionary, not a list');
-		$cookies   = new Requests_Cookie_Jar();
+		$cookies   = new Jar();
 		$cookies[] = 'requests-testcookie1=testvalue1';
 	}
 
@@ -80,7 +80,7 @@ class CookiesTest extends TestCase {
 			'requests-testcookie1' => 'testvalue1',
 			'requests-testcookie2' => 'testvalue2',
 		);
-		$jar     = new Requests_Cookie_Jar($cookies);
+		$jar     = new Jar($cookies);
 
 		foreach ($jar as $key => $value) {
 			$this->assertSame($cookies[$key], $value);
@@ -154,7 +154,7 @@ class CookiesTest extends TestCase {
 	}
 
 	public function testSendingCookieWithJar() {
-		$cookies = new Requests_Cookie_Jar(
+		$cookies = new Jar(
 			array(
 				'requests-testcookie1' => 'testvalue1',
 			)
@@ -180,7 +180,7 @@ class CookiesTest extends TestCase {
 	}
 
 	public function testSendingMultipleCookiesWithJar() {
-		$cookies = new Requests_Cookie_Jar(
+		$cookies = new Jar(
 			array(
 				'requests-testcookie1' => 'testvalue1',
 				'requests-testcookie2' => 'testvalue2',
@@ -196,7 +196,7 @@ class CookiesTest extends TestCase {
 	}
 
 	public function testSendingPrebakedCookie() {
-		$cookies = new Requests_Cookie_Jar(
+		$cookies = new Jar(
 			array(
 				new Cookie('requests-testcookie', 'testvalue'),
 			)
