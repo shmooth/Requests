@@ -39,3 +39,4 @@ class Requests_IDNAEncoder extends Requests\IdnaEncoder {}
 class Requests_IPv6 extends Requests\Ipv6 {}
 class Requests_IRI extends Requests\Iri {}
 class Requests_Response extends Requests\Response {}
+class Requests_Session extends Requests\Session {}

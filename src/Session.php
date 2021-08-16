@@ -6,8 +6,11 @@
  * @subpackage Session Handler
  */
 
+namespace Requests;
+
 use Requests\Iri;
 use Requests\Requests;
+use Requests_Cookie_Jar;
 
 /**
  * Session handler for persistent requests and default parameters
@@ -20,7 +23,7 @@ use Requests\Requests;
  * @package Requests
  * @subpackage Session Handler
  */
-class Requests_Session {
+class Session {
 	/**
 	 * Base URL for requests
 	 *

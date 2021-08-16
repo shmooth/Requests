@@ -10,14 +10,14 @@ default parameters for these.
 Let's simulate communicating with GitHub.
 
 ```php
-$session = new Requests_Session('https://api.github.com/');
+$session = new Requests\Session('https://api.github.com/');
 $session->headers['X-ContactAuthor'] = 'rmccue';
 $session->useragent = 'My-Awesome-App';
 
 $response = $session->get('/zen');
 ```
 
-You can use the `url`, `headers`, `data` and `options` properties of the Session
+You can use the `url`, `headers`, `data` and `options` properties of the `Requests\Session`
 object to set the defaults for this session, and the constructor also takes
 parameters in the same order as `Requests\Requests::request()`. Accessing any other
 properties will set the corresponding key in the options array; that is:
