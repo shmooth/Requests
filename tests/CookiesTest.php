@@ -7,8 +7,8 @@ use Requests\Cookie\Jar;
 use Requests\Exception;
 use Requests\Iri;
 use Requests\Requests;
+use Requests\Response\Headers;
 use Requests\Tests\TestCase;
-use Requests_Response_Headers;
 use Requests_Utility_CaseInsensitiveDictionary;
 
 class CookiesTest extends TestCase {
@@ -520,7 +520,7 @@ class CookiesTest extends TestCase {
 	 * @dataProvider parseResultProvider
 	 */
 	public function testParsingHeaderObject($header, $expected, $expected_attributes = array(), $expected_flags = array()) {
-		$headers               = new Requests_Response_Headers();
+		$headers               = new Headers();
 		$headers['Set-Cookie'] = $header;
 
 		// Set the reference time to 2014-01-01 00:00:00
@@ -648,7 +648,7 @@ class CookiesTest extends TestCase {
 	 */
 	public function testParsingHeaderWithOrigin($header, $origin, $expected, $expected_attributes = array(), $expected_flags = array()) {
 		$origin                = new Iri($origin);
-		$headers               = new Requests_Response_Headers();
+		$headers               = new Headers();
 		$headers['Set-Cookie'] = $header;
 
 		// Set the reference time to 2014-01-01 00:00:00

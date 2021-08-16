@@ -10,8 +10,8 @@ namespace Requests;
 
 use Requests\Cookie\Jar;
 use Requests\Exception;
+use Requests\Response\Headers;
 use Requests_Exception_HTTP;
-use Requests_Response_Headers;
 
 /**
  * HTTP response class
@@ -24,7 +24,7 @@ class Response {
 	 * Constructor
 	 */
 	public function __construct() {
-		$this->headers = new Requests_Response_Headers();
+		$this->headers = new Headers();
 		$this->cookies = new Jar();
 	}
 
@@ -45,7 +45,7 @@ class Response {
 	/**
 	 * Headers, as an associative array
 	 *
-	 * @var Requests_Response_Headers Array-like object representing headers
+	 * @var \Requests\Response\Headers Array-like object representing headers
 	 */
 	public $headers = array();
 

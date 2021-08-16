@@ -5,14 +5,18 @@
  * @package Requests
  */
 
+namespace Requests\Response;
+
 use Requests\Exception;
+use Requests_Utility_CaseInsensitiveDictionary;
+use Requests_Utility_FilteredIterator;
 
 /**
  * Case-insensitive dictionary, suitable for HTTP headers
  *
  * @package Requests
  */
-class Requests_Response_Headers extends Requests_Utility_CaseInsensitiveDictionary {
+class Headers extends Requests_Utility_CaseInsensitiveDictionary {
 	/**
 	 * Get the given header
 	 *
