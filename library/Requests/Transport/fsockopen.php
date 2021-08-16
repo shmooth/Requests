@@ -8,6 +8,7 @@
 
 use Requests\Exception;
 use Requests\Requests;
+use Requests\Ssl;
 use Requests\Transport;
 
 /**
@@ -448,7 +449,7 @@ class Requests_Transport_fsockopen implements Transport {
 
 		$cert = openssl_x509_parse($meta['ssl']['peer_certificate']);
 
-		return Requests_SSL::verify_certificate($host, $cert);
+		return Ssl::verify_certificate($host, $cert);
 	}
 
 	/**

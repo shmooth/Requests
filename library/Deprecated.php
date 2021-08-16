@@ -40,3 +40,4 @@ class Requests_IPv6 extends Requests\Ipv6 {}
 class Requests_IRI extends Requests\Iri {}
 class Requests_Response extends Requests\Response {}
 class Requests_Session extends Requests\Session {}
+class Requests_SSL extends Requests\Ssl {}

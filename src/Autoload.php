@@ -48,6 +48,7 @@ if (class_exists('Requests\Autoload') === false) {
 			'requests_iri'         => '\Requests\Iri',
 			'requests_response'    => '\Requests\Response',
 			'requests_session'     => '\Requests\Session',
+			'requests_ssl'         => '\Requests\Ssl',
 		);
 
 		/**
