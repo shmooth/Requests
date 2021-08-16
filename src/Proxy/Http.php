@@ -7,6 +7,8 @@
  * @since 1.6
  */
 
+namespace Requests\Proxy;
+
 use Requests\Exception;
 use Requests\Hooks;
 use Requests\Proxy;
@@ -20,7 +22,7 @@ use Requests\Proxy;
  * @subpackage Proxy
  * @since 1.6
  */
-class Requests_Proxy_HTTP implements Proxy {
+class Http implements Proxy {
 	/**
 	 * Proxy host and port
 	 *

@@ -51,6 +51,7 @@ if (class_exists('Requests\Autoload') === false) {
 			'requests_ssl'         => '\Requests\Ssl',
 			'requests_auth_basic'  => '\Requests\Auth\Basic',
 			'requests_cookie_jar'  => '\Requests\Cookie\Jar',
+			'requests_proxy_http'  => '\Requests\Proxy\Http',
 		);
 
 		/**

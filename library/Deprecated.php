@@ -44,3 +44,4 @@ class Requests_SSL extends Requests\Ssl {}
 
 class Requests_Auth_Basic extends Requests\Auth\Basic {}
 class Requests_Cookie_Jar extends Requests\Cookie\Jar {}
+class Requests_Proxy_HTTP extends Requests\Proxy\Http {}
