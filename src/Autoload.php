@@ -56,6 +56,7 @@ if (class_exists('Requests\Autoload') === false) {
 			'requests_transport_curl'                    => '\Requests\Transport\Curl',
 			'requests_transport_fsockopen'               => '\Requests\Transport\Fsockopen',
 			'requests_utility_caseinsensitivedictionary' => '\Requests\Utility\CaseInsensitiveDictionary',
+			'requests_utility_filterediterator'          => '\Requests\Utility\FilteredIterator',
 		);
 
 		/**
