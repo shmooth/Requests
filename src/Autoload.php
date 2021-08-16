@@ -49,6 +49,7 @@ if (class_exists('Requests\Autoload') === false) {
 			'requests_response'    => '\Requests\Response',
 			'requests_session'     => '\Requests\Session',
 			'requests_ssl'         => '\Requests\Ssl',
+			'requests_auth_basic'  => '\Requests\Auth\Basic',
 		);
 
 		/**

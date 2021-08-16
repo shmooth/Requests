@@ -41,3 +41,5 @@ class Requests_IRI extends Requests\Iri {}
 class Requests_Response extends Requests\Response {}
 class Requests_Session extends Requests\Session {}
 class Requests_SSL extends Requests\Ssl {}
+
+class Requests_Auth_Basic extends Requests\Auth\Basic {}

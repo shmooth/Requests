@@ -6,6 +6,8 @@
  * @subpackage Authentication
  */
 
+namespace Requests\Auth;
+
 use Requests\Auth;
 use Requests\Exception;
 use Requests\Hooks;
@@ -19,7 +21,7 @@ use Requests\Hooks;
  * @package Requests
  * @subpackage Authentication
  */
-class Requests_Auth_Basic implements Auth {
+class Basic implements Auth {
 	/**
 	 * Username
 	 *

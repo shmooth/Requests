@@ -11,12 +11,12 @@
 
 namespace Requests;
 
+use Requests\Auth\Basic;
 use Requests\Exception;
 use Requests\Hooks;
 use Requests\IdnaEncoder;
 use Requests\Iri;
 use Requests\Response;
-use Requests_Auth_Basic;
 use Requests_Cookie_Jar;
 use Requests_Proxy_HTTP;
 use Requests_Transport_cURL;
@@ -551,7 +551,7 @@ class Requests {
 		}
 
 		if (is_array($options['auth'])) {
-			$options['auth'] = new Requests_Auth_Basic($options['auth']);
+			$options['auth'] = new Basic($options['auth']);
 		}
 		if ($options['auth'] !== false) {
 			$options['auth']->register($options['hooks']);
