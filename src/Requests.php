@@ -20,7 +20,7 @@ use Requests\Iri;
 use Requests\Proxy\Http;
 use Requests\Response;
 use Requests\Transport\Curl;
-use Requests_Transport_fsockopen;
+use Requests\Transport\Fsockopen;
 
 /**
  * Requests for PHP
@@ -145,7 +145,7 @@ class Requests {
 		if (empty(self::$transports)) {
 			self::$transports = array(
 				Curl::class,
-				Requests_Transport_fsockopen::class,
+				Fsockopen::class,
 			);
 		}
 
@@ -175,7 +175,7 @@ class Requests {
 		if (empty(self::$transports)) {
 			self::$transports = array(
 				Curl::class,
-				Requests_Transport_fsockopen::class,
+				Fsockopen::class,
 			);
 		}
 

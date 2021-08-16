@@ -7,12 +7,12 @@ use Requests\Exception;
 use Requests\Requests;
 use Requests\Tests\TestCase;
 use Requests\Transport\Curl;
-use Requests_Transport_fsockopen;
+use Requests\Transport\Fsockopen;
 
 class BasicTest extends TestCase {
 	public static function transportProvider() {
 		return array(
-			array(Requests_Transport_fsockopen::class),
+			array(Fsockopen::class),
 			array(Curl::class),
 		);
 	}

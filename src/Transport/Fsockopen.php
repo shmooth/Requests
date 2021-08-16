@@ -6,10 +6,14 @@
  * @subpackage Transport
  */
 
+namespace Requests\Transport;
+
 use Requests\Exception;
 use Requests\Requests;
 use Requests\Ssl;
 use Requests\Transport;
+use Requests_Exception_InvalidArgument;
+use Requests_Utility_CaseInsensitiveDictionary;
 
 /**
  * fsockopen HTTP transport
@@ -17,7 +21,7 @@ use Requests\Transport;
  * @package Requests
  * @subpackage Transport
  */
-class Requests_Transport_fsockopen implements Transport {
+class Fsockopen implements Transport {
 	/**
 	 * Second to microsecond conversion
 	 *
