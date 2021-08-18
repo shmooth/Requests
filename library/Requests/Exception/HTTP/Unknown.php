@@ -5,6 +5,7 @@
  * @package Requests
  */
 
+use Requests\Exception\Http;
 use Requests\Response;
 
 /**
@@ -12,7 +13,7 @@ use Requests\Response;
  *
  * @package Requests
  */
-class Requests_Exception_HTTP_Unknown extends Requests_Exception_HTTP {
+class Requests_Exception_HTTP_Unknown extends Http {
 	/**
 	 * HTTP status code
 	 *

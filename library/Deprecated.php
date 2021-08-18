@@ -50,3 +50,5 @@ class Requests_Transport_cURL extends Requests\Transport\Curl {}
 class Requests_Transport_fsockopen extends Requests\Transport\Fsockopen {}
 class Requests_Utility_CaseInsensitiveDictionary extends Requests\Utility\CaseInsensitiveDictionary {}
 class Requests_Utility_FilteredIterator extends Requests\Utility\FilteredIterator {}
+
+class Requests_Exception_HTTP extends Requests\Exception\Http {}

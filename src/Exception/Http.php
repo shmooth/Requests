@@ -5,14 +5,17 @@
  * @package Requests
  */
 
+namespace Requests\Exception;
+
 use Requests\Exception;
+use Requests_Exception_HTTP_Unknown;
 
 /**
  * Exception based on HTTP response
  *
  * @package Requests
  */
-class Requests_Exception_HTTP extends Exception {
+class Http extends Exception {
 	/**
 	 * HTTP status code
 	 *

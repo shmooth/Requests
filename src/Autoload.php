@@ -57,6 +57,7 @@ if (class_exists('Requests\Autoload') === false) {
 			'requests_transport_fsockopen'               => '\Requests\Transport\Fsockopen',
 			'requests_utility_caseinsensitivedictionary' => '\Requests\Utility\CaseInsensitiveDictionary',
 			'requests_utility_filterediterator'          => '\Requests\Utility\FilteredIterator',
+			'requests_exception_http'                    => '\Requests\Exception\Http',
 		);
 
 		/**
