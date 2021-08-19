@@ -53,3 +53,4 @@ class Requests_Utility_FilteredIterator extends Requests\Utility\FilteredIterato
 
 class Requests_Exception_HTTP extends Requests\Exception\Http {}
 class Requests_Exception_Transport extends Requests\Exception\Transport {}
+class Requests_Exception_Transport_cURL extends Requests\Exception\Transport\Curl {}

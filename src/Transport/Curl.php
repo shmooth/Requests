@@ -12,9 +12,9 @@ use RecursiveArrayIterator;
 use RecursiveIteratorIterator;
 use Requests\Exception;
 use Requests\Exception\InvalidArgument;
+use Requests\Exception\Transport\Curl as CurlException;
 use Requests\Requests;
 use Requests\Transport;
-use Requests_Exception_Transport_cURL;
 
 /**
  * cURL HTTP transport
@@ -275,9 +275,9 @@ class Curl implements Transport {
 				if ($done['result'] !== CURLE_OK) {
 					//get error string for handle.
 					$reason          = curl_error($done['handle']);
-					$exception       = new Requests_Exception_Transport_cURL(
+					$exception       = new CurlException(
 						$reason,
-						Requests_Exception_Transport_cURL::EASY,
+						CurlException::EASY,
 						$done['handle'],
 						$done['result']
 					);

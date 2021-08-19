@@ -59,6 +59,7 @@ if (class_exists('Requests\Autoload') === false) {
 			'requests_utility_filterediterator'          => '\Requests\Utility\FilteredIterator',
 			'requests_exception_http'                    => '\Requests\Exception\Http',
 			'requests_exception_transport'               => '\Requests\Exception\Transport',
+			'requests_exception_transport_curl'          => '\Requests\Exception\Transport\Curl',
 		);
 
 		/**
