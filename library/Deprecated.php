@@ -52,3 +52,4 @@ class Requests_Utility_CaseInsensitiveDictionary extends Requests\Utility\CaseIn
 class Requests_Utility_FilteredIterator extends Requests\Utility\FilteredIterator {}
 
 class Requests_Exception_HTTP extends Requests\Exception\Http {}
+class Requests_Exception_Transport extends Requests\Exception\Transport {}
