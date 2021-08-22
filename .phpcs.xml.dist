@@ -189,8 +189,8 @@
 			</property>
 		</properties>
 		
-		<!-- Only code within the actual distributed package needs to be prefixed. -->
-		<include-pattern>/library/*\.php$</include-pattern>
+		<exclude-pattern>*/examples/*\.php$</exclude-pattern>
+		<exclude-pattern>*/tests/bootstrap\.php$</exclude-pattern>
 	</rule>
 
 	<!-- Simplify alignment rules for multiline arrays. -->
