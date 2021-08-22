@@ -11,9 +11,9 @@ namespace Requests\Transport;
 use RecursiveArrayIterator;
 use RecursiveIteratorIterator;
 use Requests\Exception;
+use Requests\Exception\InvalidArgument;
 use Requests\Requests;
 use Requests\Transport;
-use Requests_Exception_InvalidArgument;
 use Requests_Exception_Transport_cURL;
 
 /**
@@ -146,7 +146,7 @@ class Curl implements Transport {
 			} elseif (is_int($data) || is_float($data)) {
 				$data = (string) $data;
 			} else {
-				throw new Requests_Exception_InvalidArgument(
+				throw new InvalidArgument(
 					sprintf(
 						'%s: Argument #%d (%s) must be of type %s, %s given',
 						__METHOD__,

@@ -9,11 +9,11 @@
 namespace Requests\Transport;
 
 use Requests\Exception;
+use Requests\Exception\InvalidArgument;
 use Requests\Requests;
 use Requests\Ssl;
 use Requests\Transport;
 use Requests\Utility\CaseInsensitiveDictionary;
-use Requests_Exception_InvalidArgument;
 
 /**
  * fsockopen HTTP transport
@@ -71,7 +71,7 @@ class Fsockopen implements Transport {
 			} elseif (is_int($data) || is_float($data)) {
 				$data = (string) $data;
 			} else {
-				throw new Requests_Exception_InvalidArgument(
+				throw new InvalidArgument(
 					sprintf(
 						'%s: Argument #%d (%s) must be of type %s, %s given',
 						__METHOD__,

@@ -3,6 +3,7 @@
 namespace Requests\Tests\Transport;
 
 use Requests\Exception;
+use Requests\Exception\InvalidArgument;
 use Requests\Hooks;
 use Requests\Requests;
 use Requests\Response;
@@ -230,7 +231,7 @@ abstract class BaseTestCase extends TestCase {
 	 * @return void
 	 */
 	public function testIncorrectDataTypeExceptionPOST($data) {
-		$this->expectException('Requests_Exception_InvalidArgument');
+		$this->expectException(InvalidArgument::class);
 		$this->expectExceptionMessage('Argument #3 ($data) must be of type array|string');
 
 		$request = Requests::post(httpbin('/post'), array(), $data, $this->getOptions());
