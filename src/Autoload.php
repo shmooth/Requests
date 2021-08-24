@@ -83,8 +83,12 @@ if (class_exists('Requests\Autoload') === false) {
 			}
 
 			if ($class_name === 'Requests') {
-				// Original PSR-0 Requests class.
-				$file = dirname(__DIR__) . '/library/Requests.php';
+				/*
+				 * Reference to the original PSR-0 Requests class.
+				 * Loading this class will always generate a deprecation notice.
+				 */
+				$file                     = dirname(__DIR__) . '/library/Requests.php';
+				self::$deprecation_thrown = true;
 			} elseif ($class_name[8] === '_') {
 				// PSR-0 classname.
 				$file = dirname(__DIR__) . '/library/' . str_replace('_', '/', $class_name) . '.php';
