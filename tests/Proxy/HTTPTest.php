@@ -2,7 +2,7 @@
 
 namespace Requests\Tests\Proxy;
 
-use Requests;
+use Requests\Requests;
 use Requests\Tests\TestCase;
 use Requests_Exception;
 use Requests_Proxy_HTTP;

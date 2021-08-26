@@ -2,7 +2,7 @@
 
 namespace Requests\Tests\Auth;
 
-use Requests;
+use Requests\Requests;
 use Requests\Tests\TestCase;
 use Requests_Auth_Basic;
 use Requests_Exception;

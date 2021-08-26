@@ -2,7 +2,7 @@
 
 namespace Requests\Tests;
 
-use Requests;
+use Requests\Requests;
 use Requests\Tests\TestCase;
 
 class EncodingTest extends TestCase {

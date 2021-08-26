@@ -7,7 +7,7 @@ require_once dirname(__DIR__) . '/src/Autoload.php';
 Requests\Autoload::register();
 
 // Now let's make a request!
-$request = Requests::get('http://httpbin.org/get', array('Accept' => 'application/json'));
+$request = Requests\Requests::get('http://httpbin.org/get', array('Accept' => 'application/json'));
 
 // Check what we received
 var_dump($request);

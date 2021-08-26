@@ -2,7 +2,7 @@
 
 namespace Requests\Tests\Transport;
 
-use Requests;
+use Requests\Requests;
 use Requests\Tests\Transport\BaseTestCase;
 use Requests_Exception;
 use Requests_Transport_cURL;

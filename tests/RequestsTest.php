@@ -2,7 +2,7 @@
 
 namespace Requests\Tests;
 
-use Requests;
+use Requests\Requests;
 use Requests\Tests\Mock\RawTransportMock;
 use Requests\Tests\Mock\TransportMock;
 use Requests\Tests\TestCase;

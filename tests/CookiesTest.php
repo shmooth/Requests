@@ -2,7 +2,7 @@
 
 namespace Requests\Tests;
 
-use Requests;
+use Requests\Requests;
 use Requests\Tests\TestCase;
 use Requests_Cookie;
 use Requests_Cookie_Jar;
