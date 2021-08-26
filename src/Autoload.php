@@ -150,9 +150,6 @@ if (class_exists('Requests\Autoload') === false) {
 				 */
 				$file                     = dirname(__DIR__) . '/library/Requests.php';
 				self::$deprecation_thrown = true;
-			} elseif ($class_name[8] === '_') {
-				// PSR-0 classname.
-				$file = dirname(__DIR__) . '/library/' . str_replace('_', '/', $class_name) . '.php';
 			} elseif ($class_name[8] === '\\') {
 				// PSR-4 classname.
 				$file = __DIR__ . '/' . strtr(substr($class_name, 9), '\\', '/') . '.php';
