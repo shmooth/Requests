@@ -174,15 +174,15 @@ class RequestsTest extends TestCase {
 	}
 
 	public function testHasCapabilitiesSucceedsForDetectingSsl() {
-		$this->assertTrue(Requests::has_capabilities([Requests_Capability::SSL => true]));
+		$this->assertTrue(Requests::has_capabilities(array(Requests_Capability::SSL => true)));
 	}
 
 	public function testHasCapabilitiesFailsForUnsupportedCapabilities() {
 		$transports = new ReflectionProperty(Requests::class, 'transports');
 		$transports->setAccessible(true);
-		$transports->setValue([TestTransportMock::class]);
+		$transports->setValue(array(TestTransportMock::class));
 
-		$this->assertFalse(Requests::has_capabilities(['time-travel' => true]));
+		$this->assertFalse(Requests::has_capabilities(array('time-travel' => true)));
 
 		$transports->setValue(null);
 		$transports->setAccessible(false);

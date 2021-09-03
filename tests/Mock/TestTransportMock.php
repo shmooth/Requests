@@ -9,7 +9,7 @@ class TestTransportMock implements Requests_Transport {
 		return '';
 	}
 	public function request_multiple($requests, $options) {
-		return [];
+		return array();
 	}
 	public static function test($capabilities = array()) {
 		// Time travel is not yet supported by this transport.

@@ -28,7 +28,7 @@ class Requests_Capability {
 	 *
 	 * @var array<string>
 	 */
-	const ALL = [
+	const ALL = array(
 		self::SSL,
-	];
+	);
 }
