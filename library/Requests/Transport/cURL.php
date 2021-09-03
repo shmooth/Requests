@@ -575,7 +575,7 @@ class Requests_Transport_cURL implements Requests_Transport {
 		}
 
 		// If needed, check that our installed curl version supports SSL
-		if (isset($capabilities['ssl']) && $capabilities['ssl']) {
+		if (isset($capabilities[Requests_Capability::SSL]) && $capabilities[Requests_Capability::SSL]) {
 			$curl_version = curl_version();
 			if (!(CURL_VERSION_SSL & $curl_version['features'])) {
 				return false;

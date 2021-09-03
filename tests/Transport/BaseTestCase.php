@@ -5,6 +5,7 @@ namespace Requests\Tests\Transport;
 use Requests;
 use Requests\Tests\Mock\TransportMock;
 use Requests\Tests\TestCase;
+use Requests_Capability;
 use Requests_Exception;
 use Requests_Exception_HTTP_Unknown;
 use Requests_Hooks;
@@ -21,7 +22,7 @@ abstract class BaseTestCase extends TestCase {
 			return;
 		}
 
-		$ssl_supported = call_user_func($callback, array('ssl' => true));
+		$ssl_supported = call_user_func($callback, array(Requests_Capability::SSL => true));
 		if (!$ssl_supported) {
 			$this->skip_https = true;
 		}

@@ -2,10 +2,13 @@
 
 namespace Requests\Tests;
 
+use ReflectionProperty;
 use Requests;
 use Requests\Tests\Mock\RawTransportMock;
+use Requests\Tests\Mock\TestTransportMock;
 use Requests\Tests\Mock\TransportMock;
 use Requests\Tests\TestCase;
+use Requests_Capability;
 use Requests_Exception;
 use Requests_Response_Headers;
 
@@ -168,5 +171,20 @@ class RequestsTest extends TestCase {
 		$this->expectException(Requests_Exception::class);
 		$this->expectExceptionMessage('timed out');
 		Requests::get(httpbin('/delay/3'), array(), $options);
+	}
+
+	public function testHasCapabilitiesSucceedsForDetectingSsl() {
+		$this->assertTrue(Requests::has_capabilities([Requests_Capability::SSL => true]));
+	}
+
+	public function testHasCapabilitiesFailsForUnsupportedCapabilities() {
+		$transports = new ReflectionProperty(Requests::class, 'transports');
+		$transports->setAccessible(true);
+		$transports->setValue([TestTransportMock::class]);
+
+		$this->assertFalse(Requests::has_capabilities(['time-travel' => true]));
+
+		$transports->setValue(null);
+		$transports->setAccessible(false);
 	}
 }
